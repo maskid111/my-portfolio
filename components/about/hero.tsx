@@ -1,0 +1,41 @@
+'use client'
+
+import { motion } from 'framer-motion'
+import { animations } from '@/lib/animations'
+
+export function AboutHero() {
+  return (
+    <section className="relative min-h-[28vh] sm:min-h-[34vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-[clamp(1.5rem,3vw,2.5rem)] overflow-hidden">
+      {/* Background accents */}
+      <motion.div
+        className="absolute inset-x-6 top-1/2 h-px bg-gradient-to-r from-transparent via-blue-400/30 to-transparent"
+        animate={{ opacity: [0.25, 0.55, 0.25] }}
+        transition={{ duration: 10, repeat: Infinity }}
+      />
+      <motion.div
+        className="absolute inset-x-8 top-8 bottom-8 rounded-2xl border border-white/5 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5"
+        animate={{ opacity: [0.35, 0.6, 0.35] }}
+        transition={{ duration: 12, repeat: Infinity, delay: 1 }}
+      />
+
+      <motion.div
+        className="max-w-4xl relative z-10 text-center"
+        variants={animations.containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.div variants={animations.itemVariants} className="space-y-[clamp(1.5rem,3vw,2rem)]">
+          <span className="inline-block text-blue-400 font-semibold text-[clamp(0.65rem,1.5vw,0.875rem)] tracking-widest uppercase">Get To Know Me</span>
+
+          <h1 className="text-[clamp(2rem,7vw,4rem)] font-bold leading-tight text-balance">
+            More Than a Developer
+          </h1>
+
+          <p className="text-[clamp(1rem,2.2vw,1.375rem)] text-gray-400 max-w-2xl mx-auto leading-relaxed">
+            A creator, builder, and educator passionate about shaping the future of technology through innovation and knowledge sharing.
+          </p>
+        </motion.div>
+      </motion.div>
+    </section>
+  )
+}
