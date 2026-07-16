@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { animations } from '@/lib/animations'
+import { profile } from '@/lib/profile'
 
 interface TechCategory {
   category: string
@@ -12,23 +13,23 @@ interface TechCategory {
 export function TechStack() {
   const techStack: TechCategory[] = [
     {
-      category: 'Frontend',
-      technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Vue.js'],
+      category: 'Primary Skills',
+      technologies: profile.primarySkills,
       color: 'from-blue-500 to-blue-600',
     },
     {
-      category: 'Backend',
-      technologies: ['Node.js', 'Python', 'PostgreSQL', 'MongoDB', 'GraphQL', 'REST APIs'],
+      category: 'Builder Skills',
+      technologies: ['Blockchain Builder', 'Frontend Products', 'Consensus Hire', 'GenLayer'],
       color: 'from-purple-500 to-purple-600',
     },
     {
-      category: 'Web3',
-      technologies: ['Solidity', 'Ethers.js', 'Web3.js', 'Smart Contracts', 'DeFi', 'NFTs'],
+      category: 'Creator Topics',
+      technologies: profile.contentTopics,
       color: 'from-pink-500 to-pink-600',
     },
     {
-      category: 'Tools & DevOps',
-      technologies: ['Git', 'Docker', 'AWS', 'Vercel', 'CI/CD', 'Linux'],
+      category: 'Secondary Focus',
+      technologies: profile.secondarySkills,
       color: 'from-green-500 to-green-600',
     },
   ]
@@ -43,8 +44,8 @@ export function TechStack() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <span className="text-green-400 font-semibold text-[clamp(0.65rem,1.5vw,0.875rem)] tracking-widest uppercase">Tools</span>
-          <h2 className="text-[clamp(2rem,5vw,3.5rem)] font-bold mt-[clamp(0.75rem,1.5vw,1rem)]">Tech Stack</h2>
+          <span className="text-green-400 font-semibold text-[clamp(0.65rem,1.5vw,0.875rem)] tracking-widest uppercase">Skills</span>
+          <h2 className="text-[clamp(2rem,5vw,3.5rem)] font-bold mt-[clamp(0.75rem,1.5vw,1rem)]">What I Do</h2>
         </motion.div>
 
         {/* Tech Categories - 2 columns on mobile and tablet */}

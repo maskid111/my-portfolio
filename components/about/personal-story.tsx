@@ -2,12 +2,13 @@
 
 import { motion } from 'framer-motion'
 import { animations } from '@/lib/animations'
+import { profile } from '@/lib/profile'
 
 export function PersonalStory() {
   const paragraphs = [
-    "I started as a curious kid fascinated by how things work. This curiosity evolved into a passion for technology, leading me to explore web development, blockchain, and content creation.",
-    "My journey combines three pillars: building innovative solutions, sharing knowledge through content, and fostering a community of learners. Each project, tutorial, and insight I share is a stepping stone toward democratizing technology.",
-    "Today, I focus on creating meaningful work that impacts others. Whether it's through code, video tutorials, or written guides, my goal is to make complex technologies accessible and inspire the next generation of builders."
+    `${profile.name} is a video content creator, content writer, frontend developer, blockchain builder, graphic designer, technical analyst, and trader.`,
+    `${profile.education}, building a personal brand around CT, Web3, frontend products, and creator-led storytelling.`,
+    `${profile.tagline}. The mission is clear: ${profile.mission}`,
   ]
 
   return (

@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { animations } from '@/lib/animations'
-import { Coffee, Music, BookOpen, Rocket } from 'lucide-react'
+import { BookOpen, ChartNoAxesCombined, GraduationCap, Rocket } from 'lucide-react'
 
 interface Fact {
   icon: React.ReactNode
@@ -13,24 +13,24 @@ interface Fact {
 export function FunFacts() {
   const facts: Fact[] = [
     {
-      icon: <Coffee className="h-6 w-6" />,
-      title: 'Coffee Fueled',
-      description: 'Most of my best code and creative ideas come after a good cup of coffee (or three).',
+      icon: <GraduationCap className="h-6 w-6" />,
+      title: 'Computer Science',
+      description: 'BSc holder in Computer Science with a creator and builder mindset.',
     },
     {
-      icon: <Music className="h-6 w-6" />,
-      title: 'Music Enthusiast',
-      description: 'I code to lo-fi beats and enjoy discovering new artists while building projects.',
+      icon: <ChartNoAxesCombined className="h-6 w-6" />,
+      title: 'Markets & Analysis',
+      description: 'Technical analysis and trading stay secondary, but still part of the brand.',
     },
     {
       icon: <BookOpen className="h-6 w-6" />,
-      title: 'Lifelong Learner',
-      description: 'Always exploring new technologies, frameworks, and methodologies to stay ahead.',
+      title: 'Writer',
+      description: 'Creates threads, articles, and written content for CT and Web3 audiences.',
     },
     {
       icon: <Rocket className="h-6 w-6" />,
-      title: 'Tech Optimist',
-      description: 'Believe technology can solve real-world problems and make life better for everyone.',
+      title: 'Consensus Hire',
+      description: 'Building an AI validator consensus product for hiring recommendations.',
     },
   ]
 

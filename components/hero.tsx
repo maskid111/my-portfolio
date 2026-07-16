@@ -6,6 +6,7 @@ import { ArrowRight, ChevronDown } from 'lucide-react'
 import { XProfileCard } from './x-profile-card'
 import { animations } from '@/lib/animations'
 import { useState, useEffect } from 'react'
+import { profile } from '@/lib/profile'
 
 export function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -21,7 +22,7 @@ export function Hero() {
     return () => window.removeEventListener('mousemove', handleMouseMove)
   }, [])
 
-  const title = "Building. Creating. Explaining the Future."
+  const title = 'Believe in Something.'
   const titleWords = title.split(' ')
 
   return (
@@ -63,20 +64,20 @@ export function Hero() {
 
       {/* Top Section: 50% on mobile, left column on desktop */}
       <motion.div
-        className="md:flex-none md:h-auto flex flex-col justify-center md:items-center my-2 sm:my-0 py-0.5 sm:py-6 md:py-20 px-3 sm:px-6 lg:px-8 relative z-10"
-        variants={animations.containerVariants}
+        className="md:flex-none md:h-auto flex min-h-[42dvh] md:min-h-0 flex-col justify-center md:items-center my-2 sm:my-0 py-0.5 sm:py-6 md:py-20 px-3 sm:px-6 lg:px-8 relative z-10"
+        variants={animations.heroTextVariants}
         initial="hidden"
         animate="visible"
       >
         {/* Left column content */}
-        <motion.div className="flex w-full max-w-xl flex-col gap-2 sm:gap-5 md:block md:space-y-8" variants={animations.itemVariants}>
+        <motion.div className="flex min-h-full w-full max-w-xl flex-1 flex-col justify-evenly gap-3 sm:gap-5 md:block md:min-h-0 md:flex-none md:space-y-8" variants={animations.itemVariants}>
           {/* Animated headline */}
           <div className="space-y-0.5 sm:space-y-1 md:space-y-4">
             <div className="flex flex-wrap gap-0.5 sm:gap-2 md:gap-3 items-baseline">
               {titleWords.map((word, i) => (
                 <motion.span
                   key={i}
-                  className="text-[clamp(2.35rem,11vw,3.5rem)] md:text-[clamp(1.15rem,3.8vw,3.5rem)] font-bold leading-tight"
+                  className="text-[clamp(1.98rem,9.02vw,2.915rem)] md:text-[clamp(1.15rem,3.8vw,3.5rem)] font-bold leading-tight"
                   variants={animations.floatingVariants}
                   custom={i}
                   initial="hidden"
@@ -96,10 +97,10 @@ export function Hero() {
 
           {/* Description */}
           <motion.p
-            className="text-[clamp(0.95rem,3.8vw,1.125rem)] md:text-[clamp(0.7rem,1.8vw,1.125rem)] text-gray-400 leading-relaxed max-w-lg"
+            className="text-[clamp(0.792rem,3.135vw,0.946rem)] md:text-[clamp(0.7rem,1.8vw,1.125rem)] text-gray-400 leading-relaxed max-w-lg"
             variants={animations.itemVariants}
           >
-            Crafting innovative web applications, insightful technical content, and blockchain solutions that push the boundaries of what&apos;s possible.
+            {profile.fullTitle}. Building a creator-led brand across CT, Web3, content, frontend products, and blockchain ideas.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -149,7 +150,7 @@ export function Hero() {
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             />
-            <span className="text-[clamp(0.6rem,1vw,0.875rem)] text-gray-400">Available for collaborations</span>
+            <span className="text-[clamp(0.6rem,1vw,0.875rem)] text-gray-400">{profile.currentStatuses.join(' | ')}</span>
           </motion.div>
         </motion.div>
       </motion.div>
@@ -157,7 +158,9 @@ export function Hero() {
       {/* Bottom Section: 50% on mobile, right column on desktop - Profile card */}
       <motion.div
         className="md:flex-none md:h-auto flex flex-col justify-center items-center mt-4 pt-1 pb-0 sm:mt-0 sm:py-6 md:py-20 px-3 sm:px-6 lg:px-8 relative z-10"
-        variants={animations.itemVariants}
+        variants={animations.heroVisualVariants}
+        initial="hidden"
+        animate="visible"
       >
         <motion.div
           animate={{ y: [0, -10, 0] }}

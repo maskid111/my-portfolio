@@ -13,33 +13,33 @@ interface TimelineEvent {
 export function Timeline() {
   const events: TimelineEvent[] = [
     {
-      year: '2018',
-      title: 'The Beginning',
-      description: 'Started learning web development and fell in love with creating interactive experiences on the web.',
+      year: 'Foundation',
+      title: 'Computer Science Background',
+      description: 'Built a technical foundation as a BSc holder in Computer Science.',
       color: 'from-blue-500 to-blue-600',
     },
     {
-      year: '2020',
-      title: 'Content Creator',
-      description: 'Launched YouTube channel and started writing technical articles to share knowledge with the community.',
+      year: 'Creator',
+      title: 'Content & Writing',
+      description: 'Creates videos, threads, and articles for CT, crypto, blockchain, trading, and technical analysis.',
       color: 'from-purple-500 to-purple-600',
     },
     {
-      year: '2021',
-      title: 'Web3 Pioneer',
-      description: 'Dove deep into blockchain development and launched first DApp project, exploring the future of decentralized web.',
+      year: 'Builder',
+      title: 'Frontend & Blockchain',
+      description: 'Builds frontend experiences and explores blockchain products with a creator-first perspective.',
       color: 'from-pink-500 to-pink-600',
     },
     {
-      year: '2023',
-      title: 'Community Leader',
-      description: 'Grew community to 50K+ followers and launched multiple educational platforms to help others learn.',
+      year: 'Now',
+      title: 'Consensus Hire',
+      description: 'Building an AI validator consensus product for job matching, candidate evaluation, and hiring recommendations.',
       color: 'from-green-500 to-green-600',
     },
     {
-      year: 'Today',
-      title: 'Building the Future',
-      description: 'Continuing to create, innovate, and inspire. Currently working on several exciting projects that push technological boundaries.',
+      year: 'Goal',
+      title: 'Believe in Something',
+      description: 'Working toward becoming one of the biggest creators and builders on CT.',
       color: 'from-orange-500 to-orange-600',
     },
   ]

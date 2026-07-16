@@ -2,36 +2,14 @@
 
 import { motion } from 'framer-motion'
 import { Zap, Code2, Lightbulb } from 'lucide-react'
+import { profile } from '@/lib/profile'
+import { animations } from '@/lib/animations'
 
 export function CurrentlyBuilding() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.1,
-      },
-    },
-  }
-
-  const itemVariants = {
-    hidden: { opacity: 0, x: -30 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        type: 'spring',
-        stiffness: 100,
-        damping: 20,
-      },
-    },
-  }
-
   const activities = [
-    { icon: Code2, text: 'Building an AI-powered analytics platform' },
-    { icon: Lightbulb, text: 'Exploring zero-knowledge proofs in web3' },
-    { icon: Zap, text: 'Creating educational blockchain tutorials' },
+    { icon: Code2, text: 'Designing AI validator consensus for hiring workflows' },
+    { icon: Lightbulb, text: 'Building on GenLayer for smarter candidate evaluation' },
+    { icon: Zap, text: 'Creating content while building in public on CT' },
   ]
 
   return (
@@ -44,15 +22,15 @@ export function CurrentlyBuilding() {
           transition={{ duration: 8, repeat: Infinity }}
         />
 
-        <motion.div
-          className="relative z-10"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-100px' }}
-        >
-          {/* Section header */}
-          <motion.div className="mb-[clamp(2rem,4vw,3rem)]" variants={itemVariants}>
+          <motion.div
+            className="relative z-10"
+            variants={animations.containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-100px' }}
+          >
+            {/* Section header */}
+          <motion.div className="mb-[clamp(2rem,4vw,3rem)]" variants={animations.directionalItemVariants} custom={0}>
             <span className="text-purple-400 font-semibold text-[clamp(0.65rem,1.5vw,0.875rem)] tracking-widest uppercase">Current Status</span>
             <h2 className="text-[clamp(2rem,5vw,3.5rem)] font-bold mt-[clamp(0.75rem,1.5vw,1rem)] text-white">
               Currently Building
@@ -62,25 +40,26 @@ export function CurrentlyBuilding() {
           {/* Main status card */}
           <motion.div
             className="glass-strong rounded-[clamp(0.75rem,2vw,1.5rem)] p-[clamp(1.5rem,3.5vw,3rem)] hover-lift relative overflow-hidden group"
-            variants={itemVariants}
-            whileHover={{ y: -8, scale: 1.01 }}
+            variants={animations.directionalItemVariants}
+            custom={1}
+            whileHover={{ y: -8, scale: 1.01, rotate: -0.35 }}
           >
             {/* Animated glow on hover */}
             <motion.div
               className="absolute -inset-2 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-[clamp(0.75rem,2vw,1.5rem)] opacity-0 group-hover:opacity-30 blur-xl pointer-events-none transition-opacity duration-300 z-0"
             />
 
-            <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-[clamp(1.5rem,3vw,2rem)]">
+            <div className="relative z-10 grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
               {/* Current Project */}
-              <motion.div className="flex flex-col" variants={itemVariants}>
+              <motion.div className="flex flex-col" variants={animations.directionalItemVariants} custom={2}>
                 <div className="text-purple-400 font-semibold text-[clamp(0.65rem,1.5vw,0.875rem)] tracking-widest uppercase mb-[clamp(0.5rem,1vw,0.75rem)]">
                   Main Project
                 </div>
                 <h3 className="text-[clamp(1.25rem,3vw,1.875rem)] font-bold text-white mb-[clamp(0.75rem,1.5vw,1rem)]">
-                  AI Analytics
+                  {profile.currentProject}
                 </h3>
                 <p className="text-gray-400 text-[clamp(0.75rem,1.8vw,0.95rem)] leading-relaxed flex-grow">
-                  Building a real-time analytics platform powered by machine learning for developers.
+                  {profile.currentProjectDescription}
                 </p>
                 <motion.div
                   className="mt-[clamp(1rem,2vw,1.5rem)] inline-flex items-center px-[clamp(0.75rem,1.5vw,1rem)] py-[clamp(0.375rem,0.75vw,0.5rem)] rounded-full bg-purple-500/20 text-purple-300 text-[clamp(0.65rem,1.2vw,0.75rem)] font-semibold border border-purple-500/30 w-fit"
@@ -97,12 +76,12 @@ export function CurrentlyBuilding() {
               </motion.div>
 
               {/* Technologies */}
-              <motion.div className="flex flex-col" variants={itemVariants}>
+              <motion.div className="flex flex-col" variants={animations.directionalItemVariants} custom={3}>
                 <div className="text-blue-400 font-semibold text-[clamp(0.65rem,1.5vw,0.875rem)] tracking-widest uppercase mb-[clamp(0.75rem,1.5vw,1rem)]">
                   Tech Stack
                 </div>
                 <div className="flex flex-wrap gap-[clamp(0.5rem,1vw,0.75rem)] mt-[clamp(0.5rem,1vw,0.75rem)]">
-                  {['React', 'Next.js', 'TypeScript', 'Python', 'TensorFlow', 'PostgreSQL'].map(
+                  {['AI Validators', 'GenLayer', 'Job Matching', 'Candidate Evaluation', 'Hiring Recommendations'].map(
                     (tech) => (
                       <motion.span
                         key={tech}
@@ -117,7 +96,7 @@ export function CurrentlyBuilding() {
               </motion.div>
 
               {/* Latest Activity */}
-              <motion.div className="flex flex-col" variants={itemVariants}>
+              <motion.div className="col-span-2 flex flex-col lg:col-span-1" variants={animations.directionalItemVariants} custom={4}>
                 <div className="text-pink-400 font-semibold text-[clamp(0.65rem,1.5vw,0.875rem)] tracking-widest uppercase mb-[clamp(0.75rem,1.5vw,1rem)]">
                   Latest Activities
                 </div>
@@ -139,13 +118,13 @@ export function CurrentlyBuilding() {
           </motion.div>
 
           {/* Exploring section */}
-          <motion.div className="mt-[clamp(1.5rem,3vw,2rem)]" variants={itemVariants}>
+          <motion.div className="mt-[clamp(1.5rem,3vw,2rem)]" variants={animations.directionalItemVariants} custom={5}>
             <motion.div
               className="glass rounded-[clamp(0.75rem,2vw,1rem)] p-[clamp(1rem,2vw,1.5rem)] inline-block hover:bg-purple-500/10 transition-colors"
               whileHover={{ scale: 1.05 }}
             >
               <p className="text-[clamp(0.85rem,1.8vw,1rem)] text-gray-300">
-                <span className="text-purple-400 font-semibold">Exploring:</span> Advanced AI/ML models, On-chain data indexing, Real-time streaming architectures
+                <span className="text-purple-400 font-semibold">Available for:</span> {profile.contactFor.join(', ')}
               </p>
             </motion.div>
           </motion.div>

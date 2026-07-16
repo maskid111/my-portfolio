@@ -15,26 +15,26 @@ export function CoreValues() {
   const values: Value[] = [
     {
       icon: <Lightbulb className="h-8 w-8" />,
-      title: 'Innovation',
-      description: 'Constantly pushing boundaries and exploring new technologies to create meaningful solutions.',
+      title: 'Belief',
+      description: 'Believe in Something is the core idea behind the brand: conviction first, then building.',
       color: 'blue',
     },
     {
       icon: <Users className="h-8 w-8" />,
-      title: 'Community',
-      description: 'Building and nurturing a supportive community where everyone can learn and grow together.',
+      title: 'CT Presence',
+      description: 'Creating, writing, and building in public for the crypto and Web3 timeline.',
       color: 'purple',
     },
     {
       icon: <Target className="h-8 w-8" />,
-      title: 'Excellence',
-      description: 'Committed to delivering high-quality work in everything I create, from code to content.',
+      title: 'Execution',
+      description: 'Focused on turning ideas into content, products, analysis, and useful frontend experiences.',
       color: 'pink',
     },
     {
       icon: <Zap className="h-8 w-8" />,
-      title: 'Impact',
-      description: 'Focused on creating work that makes a positive difference in people lives and careers.',
+      title: 'Growth',
+      description: 'Building toward becoming one of the biggest creators and builders on CT.',
       color: 'yellow',
     },
   ]

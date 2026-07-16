@@ -24,6 +24,64 @@ export const animations = {
     },
   },
 
+  directionalItemVariants: {
+    hidden: (custom: number = 0) => {
+      const patterns = [
+        { opacity: 0, x: -44, y: 10, rotate: -2, scale: 0.96 },
+        { opacity: 0, x: 44, y: 10, rotate: 2, scale: 0.96 },
+        { opacity: 0, x: 0, y: 34, rotate: 0, scale: 0.94 },
+        { opacity: 0, x: 0, y: -24, rotate: 1, scale: 0.97 },
+      ]
+
+      return patterns[custom % patterns.length]
+    },
+    visible: (custom: number = 0) => ({
+      opacity: 1,
+      x: 0,
+      y: 0,
+      rotate: 0,
+      scale: 1,
+      transition: {
+        type: 'spring',
+        stiffness: 120,
+        damping: 18,
+        delay: custom * 0.06,
+      },
+    }),
+  },
+
+  heroTextVariants: {
+    hidden: { opacity: 0, x: -56, filter: 'blur(8px)' },
+    visible: {
+      opacity: 1,
+      x: 0,
+      filter: 'blur(0px)',
+      transition: {
+        type: 'spring',
+        stiffness: 90,
+        damping: 18,
+        staggerChildren: 0.08,
+      },
+    },
+  },
+
+  heroVisualVariants: {
+    hidden: { opacity: 0, x: 48, scale: 0.94, rotate: 2, filter: 'blur(8px)' },
+    visible: {
+      opacity: 1,
+      x: 0,
+      scale: 1,
+      rotate: 0,
+      filter: 'blur(0px)',
+      transition: {
+        type: 'spring',
+        stiffness: 90,
+        damping: 18,
+        delay: 0.15,
+      },
+    },
+  },
+
   fadeInUp: {
     hidden: { opacity: 0, y: 30 },
     visible: {

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { ContactHero } from '@/components/contact/hero'
+import { FollowCTA } from '@/components/contact/follow-cta'
 import { AvailabilityCard } from '@/components/contact/availability-card'
 import { SocialLinksGrid } from '@/components/contact/social-links-grid'
 import { Footer } from '@/components/footer'
@@ -13,13 +14,15 @@ export default function ContactPage() {
       <ContactHero />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-[clamp(2rem,4vw,4rem)]">
+        <FollowCTA />
+
         {/* Let's Connect section */}
         <motion.div
           variants={animations.containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-50px' }}
-          className="mb-[clamp(2rem,4vw,4rem)]"
+          className="mt-[clamp(2rem,4vw,4rem)] mb-[clamp(2rem,4vw,4rem)]"
         >
           <motion.div variants={animations.itemVariants} className="text-center mb-[clamp(2rem,4vw,3rem)]">
             <span className="text-green-400 font-semibold text-[clamp(0.65rem,1.5vw,0.875rem)] tracking-widest uppercase">

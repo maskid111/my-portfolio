@@ -1,8 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Mail, Send, Code2, BookOpen, Zap, MessageCircle } from 'lucide-react'
+import { Mail, Send, Code2, Zap, MessageCircle } from 'lucide-react'
 import { animations } from '@/lib/animations'
+import { profile } from '@/lib/profile'
 
 interface SocialLink {
   id: string
@@ -20,66 +21,50 @@ export function SocialLinksGrid() {
     {
       id: 'x',
       name: 'X (Twitter)',
-      username: '@maskid_dev',
-      description: 'Latest thoughts, updates, and tech insights',
+      username: profile.xHandle,
+      description: 'Videos, threads, CT updates, and building in public',
       icon: <Zap className="w-8 h-8 md:w-10 md:h-10" />,
-      href: 'https://x.com',
+      href: profile.socialLinks.x,
       color: 'text-white',
       bgGradient: 'from-slate-600 to-slate-900',
     },
     {
       id: 'github',
       name: 'GitHub',
-      username: '@maskid',
-      description: 'Check out my open source projects',
+      username: '@maskid111',
+      description: 'Frontend and blockchain projects',
       icon: <Code2 className="w-8 h-8 md:w-10 md:h-10" />,
-      href: 'https://github.com',
+      href: profile.socialLinks.github,
       color: 'text-gray-200',
       bgGradient: 'from-gray-700 to-gray-900',
     },
     {
-      id: 'blog',
-      name: 'Blog',
-      description: 'In-depth articles on web development and blockchain',
-      icon: <BookOpen className="w-8 h-8 md:w-10 md:h-10" />,
-      href: 'https://blog.example.com',
-      color: 'text-blue-300',
-      bgGradient: 'from-blue-600 to-blue-900',
-    },
-    {
-      id: 'youtube',
-      name: 'YouTube',
-      description: 'Full-length tutorials and deep dives',
-      icon: <Zap className="w-8 h-8 md:w-10 md:h-10" />,
-      href: 'https://youtube.com',
-      color: 'text-red-300',
-      bgGradient: 'from-red-600 to-red-900',
-    },
-    {
       id: 'telegram',
       name: 'Telegram',
-      description: 'Real-time updates and community chat',
+      username: profile.telegramHandle,
+      description: 'Reach out for gigs, collaborations, mentorship, and training',
       icon: <Send className="w-8 h-8 md:w-10 md:h-10" />,
-      href: 'https://telegram.me',
+      href: profile.socialLinks.telegram,
       color: 'text-blue-400',
       bgGradient: 'from-blue-500 to-cyan-800',
     },
     {
       id: 'discord',
       name: 'Discord',
-      description: 'Join my community server',
+      username: profile.discordHandle,
+      description: 'Contact handle for collaborations and community conversations',
       icon: <MessageCircle className="w-8 h-8 md:w-10 md:h-10" />,
-      href: 'https://discord.gg',
+      href: profile.socialLinks.discord,
       color: 'text-indigo-300',
       bgGradient: 'from-indigo-600 to-purple-900',
     },
     {
       id: 'email',
       name: 'Email',
-      username: 'hello@maskid.dev',
+      username: profile.email,
       description: 'Drop me an email directly',
       icon: <Mail className="w-8 h-8 md:w-10 md:h-10" />,
-      href: 'mailto:hello@maskid.dev',
+      href: profile.socialLinks.email,
       color: 'text-amber-300',
       bgGradient: 'from-amber-600 to-orange-900',
     },
@@ -101,7 +86,7 @@ export function SocialLinksGrid() {
           rel="noopener noreferrer"
           className={`group relative overflow-hidden rounded-[clamp(0.75rem,2vw,1.25rem)] bg-gradient-to-br ${link.bgGradient} p-[clamp(1rem,2.5vw,2rem)] min-h-[clamp(160px,50vw,240px)] flex flex-col justify-between cursor-pointer transition-all duration-300`}
           custom={index}
-          variants={animations.itemVariants}
+          variants={animations.directionalItemVariants}
           whileHover={{ y: -8, scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
         >

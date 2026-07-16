@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { animations } from '@/lib/animations'
+import { profile } from '@/lib/profile'
 
 export function CreatorHero() {
   return (
@@ -17,14 +18,14 @@ export function CreatorHero() {
         animate="visible"
       >
         <motion.div variants={animations.itemVariants} className="space-y-6">
-          <span className="inline-block text-purple-400 font-semibold text-sm tracking-widest uppercase">Content Hub</span>
+          <span className="inline-block text-purple-400 font-semibold text-sm tracking-widest uppercase">Creator Portfolio</span>
 
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
-            Creator Journey
+            I explain products, markets, and Web3 ideas for CT.
           </h1>
 
           <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            Explore my content across videos, articles, and technical insights that inspire and educate the community.
+            {profile.name} creates videos, threads, and written breakdowns across {profile.contentTopics.join(', ')} for teams and communities that need attention with substance.
           </p>
         </motion.div>
       </motion.div>

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { animations } from '@/lib/animations'
+import { profile } from '@/lib/profile'
 
 export function DevelopmentHero() {
   return (
@@ -17,14 +18,14 @@ export function DevelopmentHero() {
         animate="visible"
       >
         <motion.div variants={animations.itemVariants} className="space-y-6">
-          <span className="inline-block text-green-400 font-semibold text-sm tracking-widest uppercase">Portfolio</span>
+          <span className="inline-block text-green-400 font-semibold text-sm tracking-widest uppercase">Developer Portfolio</span>
 
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
-            Projects & Experiments
+            Frontend, Web3, and product builds that ship.
           </h1>
 
           <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            A showcase of web applications, blockchain projects, and experimental work that demonstrates innovation and technical excellence.
+            A portfolio of completed websites, ecommerce platforms, decentralized apps, and current AI validator work through {profile.currentProject}.
           </p>
         </motion.div>
       </motion.div>

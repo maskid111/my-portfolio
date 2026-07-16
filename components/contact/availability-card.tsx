@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Clock, CheckCircle } from 'lucide-react'
+import { profile } from '@/lib/profile'
 
 export function AvailabilityCard() {
   return (
@@ -22,7 +23,7 @@ export function AvailabilityCard() {
           <h3 className="text-lg font-bold">Currently Available</h3>
         </div>
         <p className="text-gray-400 text-sm">
-          Open for freelance projects, collaborations, and consulting opportunities.
+          Open for {profile.contactFor.join(', ').toLowerCase()}.
         </p>
       </div>
 
@@ -32,22 +33,22 @@ export function AvailabilityCard() {
           <h3 className="text-lg font-bold">Response Time</h3>
         </div>
         <p className="text-gray-400 text-sm">
-          I typically respond to messages within 24-48 hours during business days.
+          Best way to reach me: X, Telegram, Discord, or email at {profile.email}.
         </p>
       </div>
 
       <div className="space-y-3 pt-2">
         <div className="flex justify-between text-sm">
-          <span className="text-gray-400">Freelance Work</span>
+          <span className="text-gray-400">Gigs</span>
           <span className="text-green-400 font-medium">Available</span>
         </div>
         <div className="flex justify-between text-sm">
-          <span className="text-gray-400">Consulting</span>
+          <span className="text-gray-400">Collaborations</span>
           <span className="text-green-400 font-medium">Available</span>
         </div>
         <div className="flex justify-between text-sm">
-          <span className="text-gray-400">Speaking</span>
-          <span className="text-yellow-400 font-medium">Limited</span>
+          <span className="text-gray-400">Mentorship & Training</span>
+          <span className="text-green-400 font-medium">Available</span>
         </div>
       </div>
     </motion.div>

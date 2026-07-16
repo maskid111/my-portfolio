@@ -1,12 +1,12 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Navigation } from '@/components/navigation'
+import { profile } from '@/lib/profile'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Maskid | Creator, Developer, Builder',
-  description: 'Building content, writing about emerging technologies, and creating web and blockchain applications.',
-  generator: 'v0.app',
+  title: profile.seo.title,
+  description: profile.seo.description,
   icons: {
     icon: [
       {

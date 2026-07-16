@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { animations } from '@/lib/animations'
+import { profile } from '@/lib/profile'
 
 export function ContactHero() {
   return (
@@ -40,11 +41,11 @@ export function ContactHero() {
           <span className="inline-block text-pink-400 font-semibold text-[clamp(0.65rem,1.5vw,0.875rem)] tracking-widest uppercase">Let&apos;s Connect</span>
 
           <h1 className="text-[clamp(2rem,7vw,4rem)] font-bold leading-tight text-balance">
-            Get in Touch
+            Follow, collaborate, or build with Maskid.
           </h1>
 
           <p className="text-[clamp(1rem,2.2vw,1.375rem)] text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            Have a project in mind? Want to collaborate? I&apos;d love to hear from you. Let&apos;s create something amazing together.
+            Connect for {profile.contactFor.join(', ').toLowerCase()}, or follow the journey as Maskid builds in public on CT.
           </p>
         </motion.div>
       </motion.div>
