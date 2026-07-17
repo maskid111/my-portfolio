@@ -37,7 +37,16 @@ export function ProjectShowcase() {
               whileHover={{ y: -6, scale: 1.02, rotate: index % 2 === 0 ? -1 : 1 }}
             >
               <div className="relative flex h-24 items-end overflow-hidden bg-gradient-to-br from-blue-500/25 via-purple-500/20 to-pink-500/20 p-3 sm:h-32 sm:p-4">
-                <div className="absolute inset-0 bg-black/20" />
+                <img
+                  src={project.previewImageUrl}
+                  alt={`${project.name} website preview`}
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                  onError={(event) => {
+                    event.currentTarget.style.display = 'none'
+                  }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/20" />
                 <div className="absolute right-2 top-2 inline-flex items-center gap-1 rounded-full border border-green-400/30 bg-green-500/10 px-2 py-1 text-[0.55rem] font-semibold text-green-300 sm:right-4 sm:top-4 sm:gap-2 sm:px-3 sm:text-xs">
                   <Rocket className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
                   {project.status}

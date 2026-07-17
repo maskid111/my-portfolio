@@ -27,6 +27,7 @@ const USER_FIELDS = [
   'username',
   'description',
   'profile_image_url',
+  'profile_banner_url',
   'public_metrics',
   'verified',
 ].join(',')
@@ -56,8 +57,8 @@ export async function GET() {
   const username = process.env.X_USERNAME || profile.xUsername
   const userId = process.env.X_USER_ID
   const apiBaseUrl = 'https://api.x.com/2'
-  const bannerUrl = process.env.X_PROFILE_BANNER_URL || process.env.X_BANNER_URL || null
-  const profileImageUrl = process.env.X_PROFILE_IMAGE_URL || process.env.X_IMAGE_URL || null
+  const bannerUrl = process.env.X_PROFILE_BANNER_URL || process.env.X_BANNER_URL || fallbackXProfile.bannerUrl
+  const profileImageUrl = process.env.X_PROFILE_IMAGE_URL || process.env.X_IMAGE_URL || fallbackXProfile.profileImageUrl
 
   if (!bearerToken) {
     return NextResponse.json({

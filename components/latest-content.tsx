@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { animations } from '@/lib/animations'
-import { allFeaturedTweets, profile } from '@/lib/profile'
+import { allFeaturedTweets } from '@/lib/profile'
 import { XLinkEmbed } from '@/components/x-link-embed'
 
 export function LatestContent() {
@@ -42,14 +42,12 @@ export function LatestContent() {
 
           <motion.div className="mt-[clamp(2rem,4vw,4rem)] flex justify-center" variants={animations.itemVariants}>
             <motion.a
-              href={profile.socialLinks.x}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/creator"
               className="w-full sm:w-auto px-[clamp(1.5rem,3vw,2rem)] py-[clamp(0.75rem,1.5vw,1rem)] rounded-[clamp(0.5rem,1.5vw,0.75rem)] glass hover-lift font-semibold bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center text-[clamp(0.875rem,2vw,1rem)]"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Follow {profile.xHandle}
+              View All Contents
             </motion.a>
           </motion.div>
         </motion.div>

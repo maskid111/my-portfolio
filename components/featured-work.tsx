@@ -41,11 +41,21 @@ export function FeaturedWork() {
                 whileTap={{ scale: 0.98 }}
               >
                 <div className="relative h-28 overflow-hidden bg-gradient-to-br from-blue-500/25 via-purple-500/20 to-pink-500/20 p-3 sm:h-36 sm:p-5">
+                  <img
+                    src={project.previewImageUrl}
+                    alt={`${project.name} website preview`}
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    loading="lazy"
+                    onError={(event) => {
+                      event.currentTarget.style.display = 'none'
+                    }}
+                  />
                   <motion.div
                     className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.18),transparent_32%),radial-gradient(circle_at_80%_70%,rgba(59,130,246,0.25),transparent_35%)]"
                     animate={{ scale: [1, 1.04, 1], opacity: [0.6, 0.9, 0.6] }}
                     transition={{ duration: 6, repeat: Infinity, delay: index * 0.4 }}
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/20" />
                   <div className="relative z-10 flex h-full flex-col justify-between">
                     <span className="inline-flex w-fit items-center gap-1.5 rounded-full border border-green-400/30 bg-green-500/10 px-2 py-1 text-[0.58rem] font-semibold text-green-300 sm:gap-2 sm:px-3 sm:text-xs">
                       <Sparkles className="h-3 w-3 sm:h-3.5 sm:w-3.5" />

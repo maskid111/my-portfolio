@@ -65,6 +65,9 @@ export const allFeaturedTweets = [
   })),
 ]
 
+const projectPreviewUrl = (url: string) =>
+  `https://api.microlink.io/?url=${encodeURIComponent(url)}&screenshot=true&meta=false&embed=screenshot.url`
+
 export const developedProjects = [
   {
     name: 'EchoMap',
@@ -73,6 +76,7 @@ export const developedProjects = [
     technologies: ['Move', 'TypeScript', 'CSS'],
     githubUrl: 'https://github.com/maskid111/EchoMap',
     demoUrl: 'https://echomapxyz.vercel.app/',
+    previewImageUrl: projectPreviewUrl('https://echomapxyz.vercel.app/'),
     status: 'Completed',
   },
   {
@@ -81,7 +85,8 @@ export const developedProjects = [
       'Decentralized AI evaluation protocol. Connect your wallet, submit your project, and receive transparent consensus-based evaluation from GenLayer validators.',
     technologies: ['TypeScript', 'CSS', 'Python'],
     githubUrl: 'https://github.com/maskid111/judgelayer',
-    demoUrl: 'https://echomapxyz.vercel.app/',
+    demoUrl: 'https://judgelayer.vercel.app/',
+    previewImageUrl: projectPreviewUrl('https://judgelayer.vercel.app/'),
     status: 'Completed',
   },
   {
@@ -90,6 +95,7 @@ export const developedProjects = [
     technologies: ['TypeScript', 'CSS', 'Solidity', 'JavaScript'],
     githubUrl: 'https://github.com/intuition-box/TrustEscrow',
     demoUrl: 'https://trustescrow.intuition.box/',
+    previewImageUrl: projectPreviewUrl('https://trustescrow.intuition.box/'),
     status: 'Completed',
   },
   {
@@ -98,6 +104,7 @@ export const developedProjects = [
     technologies: ['TypeScript', 'CSS', 'JavaScript'],
     githubUrl: 'https://github.com/maskid111/my-portfolio',
     demoUrl: 'https://maskidportfolio.vercel.app/',
+    previewImageUrl: projectPreviewUrl('https://maskidportfolio.vercel.app/'),
     status: 'Completed',
   },
   {
@@ -106,6 +113,7 @@ export const developedProjects = [
     technologies: ['HTML', 'CSS'],
     githubUrl: 'https://github.com/maskid111/seismicflyer',
     demoUrl: 'https://seismicflyer.vercel.app/',
+    previewImageUrl: projectPreviewUrl('https://seismicflyer.vercel.app/'),
     status: 'Completed',
   },
   {
@@ -115,6 +123,7 @@ export const developedProjects = [
     technologies: ['HTML', 'CSS', 'JavaScript', 'TypeScript'],
     githubUrl: 'https://github.com/maskid111/Aimab-Luxe',
     demoUrl: 'https://www.aimabluxe.com/',
+    previewImageUrl: projectPreviewUrl('https://www.aimabluxe.com/'),
     status: 'Completed',
   },
   {
@@ -124,6 +133,7 @@ export const developedProjects = [
     technologies: ['HTML'],
     githubUrl: 'https://github.com/maskid111/maletehostel',
     demoUrl: 'https://maletehostel.com.ng/',
+    previewImageUrl: projectPreviewUrl('https://maletehostel.com.ng/'),
     status: 'Completed',
   },
   {
@@ -133,6 +143,7 @@ export const developedProjects = [
     technologies: ['HTML', 'JavaScript'],
     githubUrl: 'https://github.com/deftgfx/Teamz-Adore',
     demoUrl: 'https://teamzadore.com.ng/',
+    previewImageUrl: projectPreviewUrl('https://teamzadore.com.ng/'),
     status: 'Completed',
   },
 ]

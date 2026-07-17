@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Code2, BookOpen, Zap, Send, MessageCircle, Heart } from 'lucide-react'
+import { Code2, BookOpen, Zap, Send, MessageCircle } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { profile } from '@/lib/profile'
 import { fallbackXProfile, type XProfile } from '@/lib/x-profile'
@@ -59,12 +59,18 @@ export function XProfileCard() {
       animate="visible"
     >
       {/* Cover */}
-      <div className="h-18 sm:h-32 bg-gradient-to-r from-blue-500/30 via-purple-500/30 to-pink-500/30 relative overflow-hidden">
+      <div className="h-24 sm:h-32 bg-gradient-to-r from-blue-500/30 via-purple-500/30 to-pink-500/30 relative overflow-hidden">
         {xProfile.bannerUrl && (
           <img
             src={xProfile.bannerUrl}
             alt={`${xProfile.name} X banner`}
             className="absolute inset-0 h-full w-full object-cover"
+            onError={(event) => {
+              if (event.currentTarget.src.endsWith('/maskid-banner.jpg')) {
+                return
+              }
+              event.currentTarget.src = '/maskid-banner.jpg'
+            }}
           />
         )}
         <div className="absolute inset-0 bg-black/20" />
@@ -84,6 +90,12 @@ export function XProfileCard() {
                 src={xProfile.profileImageUrl}
                 alt={`${xProfile.name} profile photo`}
                 className="h-full w-full object-cover"
+                onError={(event) => {
+                  if (event.currentTarget.src.endsWith('/maskid-pfp.jpg')) {
+                    return
+                  }
+                  event.currentTarget.src = '/maskid-pfp.jpg'
+                }}
               />
             ) : (
               <span>{xProfile.name.charAt(0)}</span>
@@ -151,21 +163,19 @@ export function XProfileCard() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.35 }}
         >
-          <div className="flex-1 text-center py-1.5 sm:py-2">
-            <div className="text-gray-400 text-xs mb-0.5">Status</div>
+          <a href="/contact" className="flex-1 py-1.5 text-center transition-colors hover:bg-white/5 sm:py-2">
             <div className="flex items-center justify-center gap-1 text-pink-400 font-semibold text-sm">
-              <Heart className="w-4 h-4" />
-              <span>Open</span>
+              <Send className="w-4 h-4" />
+              <span>Contact</span>
             </div>
-          </div>
+          </a>
           <div className="w-px bg-white/10" />
-          <div className="flex-1 text-center py-1.5 sm:py-2">
-            <div className="text-gray-400 text-xs mb-0.5">Focus</div>
+          <a href="/about" className="flex-1 py-1.5 text-center transition-colors hover:bg-white/5 sm:py-2">
             <div className="flex items-center justify-center gap-1 text-blue-400 font-semibold text-sm">
-              <MessageCircle className="w-4 h-4" />
-              <span>CT</span>
+              <BookOpen className="w-4 h-4" />
+              <span>About</span>
             </div>
-          </div>
+          </a>
         </motion.div>
       </div>
     </motion.div>

@@ -1,7 +1,6 @@
 import { Hero } from '@/components/hero'
 import { FeaturedWork } from '@/components/featured-work'
 import { CurrentlyBuilding } from '@/components/currently-building'
-import { SocialProof } from '@/components/social-proof'
 import { LatestContent } from '@/components/latest-content'
 import { Footer } from '@/components/footer'
 
@@ -16,9 +15,6 @@ export default function Page() {
 
       {/* Currently Building Section */}
       <CurrentlyBuilding />
-
-      {/* Social Proof Section */}
-      <SocialProof />
 
       {/* Latest Content Section */}
       <LatestContent />
