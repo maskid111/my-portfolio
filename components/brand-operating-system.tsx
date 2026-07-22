@@ -92,16 +92,23 @@ export function BrandOperatingSystem() {
                   rel="noopener noreferrer"
                   className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] p-4"
                 >
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-violet-500/14 to-slate-950" />
                   <img
                     src={featuredBuild.previewImageUrl}
                     alt={`${featuredBuild.name} preview`}
-                    className="absolute inset-0 h-full w-full object-cover opacity-45 transition duration-700 group-hover:scale-105 group-hover:opacity-60"
+                    className="absolute inset-0 h-full w-full object-cover opacity-35 transition duration-700 group-hover:scale-105 group-hover:opacity-45"
                     loading="lazy"
                     onError={(event) => {
                       event.currentTarget.src = '/placeholder.jpg'
                     }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/10" />
+                  <iframe
+                    src={featuredBuild.demoUrl}
+                    title={`${featuredBuild.name} live preview`}
+                    className="pointer-events-none absolute left-0 top-0 h-[200%] w-[200%] origin-top-left scale-50 border-0 opacity-60 transition duration-700 group-hover:scale-[0.52] group-hover:opacity-75"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-black/10" />
                   <div className="relative z-10 flex h-full min-h-[10rem] flex-col justify-between">
                     <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gray-300">Featured App</p>
                     <div>

@@ -66,7 +66,7 @@ export const allFeaturedTweets = [
 ]
 
 const projectPreviewUrl = (url: string) =>
-  `https://api.microlink.io/?url=${encodeURIComponent(url)}&screenshot=true&meta=false&embed=screenshot.url`
+  `https://s.wordpress.com/mshots/v1/${encodeURIComponent(url)}?w=1200`
 
 export const developedProjects = [
   {

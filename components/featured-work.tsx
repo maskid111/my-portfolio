@@ -41,14 +41,21 @@ export function FeaturedWork() {
                 whileTap={{ scale: 0.98 }}
               >
                 <div className="relative h-28 overflow-hidden bg-gradient-to-br from-blue-500/20 via-violet-500/14 to-slate-900 p-3 sm:h-36 sm:p-5">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-violet-500/14 to-slate-950" />
                   <img
                     src={project.previewImageUrl}
                     alt={`${project.name} website preview`}
-                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="absolute inset-0 h-full w-full object-cover opacity-40 transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
                     onError={(event) => {
                       event.currentTarget.src = '/placeholder.jpg'
                     }}
+                  />
+                  <iframe
+                    src={project.demoUrl}
+                    title={`${project.name} live preview`}
+                    className="pointer-events-none absolute left-0 top-0 h-[200%] w-[200%] origin-top-left scale-50 border-0 opacity-60 transition duration-700 group-hover:scale-[0.52] group-hover:opacity-75"
+                    loading="lazy"
                   />
                   <motion.div
                     className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.18),transparent_32%),radial-gradient(circle_at_80%_70%,rgba(59,130,246,0.25),transparent_35%)]"
