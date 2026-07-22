@@ -14,7 +14,7 @@ export function AboutHero() {
         transition={{ duration: 10, repeat: Infinity }}
       />
       <motion.div
-        className="absolute inset-x-8 top-8 bottom-8 rounded-2xl border border-white/5 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5"
+        className="absolute inset-x-8 top-8 bottom-8 rounded-2xl border border-white/5 bg-gradient-to-br from-blue-500/5 via-transparent to-violet-500/5"
         animate={{ opacity: [0.35, 0.6, 0.35] }}
         transition={{ duration: 12, repeat: Infinity, delay: 1 }}
       />
@@ -26,13 +26,13 @@ export function AboutHero() {
         animate="visible"
       >
         <motion.div variants={animations.itemVariants} className="space-y-[clamp(1.5rem,3vw,2rem)]">
-          <span className="inline-block text-blue-400 font-semibold text-[clamp(0.65rem,1.5vw,0.875rem)] tracking-widest uppercase">About Maskid</span>
+          <span className="eyebrow inline-block">About Maskid</span>
 
-          <h1 className="text-[clamp(2rem,7vw,4rem)] font-bold leading-tight text-balance">
+          <h1 className="heading-section text-balance">
             {profile.tagline}
           </h1>
 
-          <p className="text-[clamp(1rem,2.2vw,1.375rem)] text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="body-copy max-w-2xl mx-auto">
             {profile.fullTitle}. {profile.education}. {profile.mission}
           </p>
         </motion.div>

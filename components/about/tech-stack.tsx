@@ -20,17 +20,17 @@ export function TechStack() {
     {
       category: 'Builder Skills',
       technologies: ['Blockchain Builder', 'Frontend Products', 'Consensus Hire', 'GenLayer'],
-      color: 'from-purple-500 to-purple-600',
+      color: 'from-violet-500 to-violet-600',
     },
     {
       category: 'Creator Topics',
       technologies: profile.contentTopics,
-      color: 'from-pink-500 to-pink-600',
+      color: 'from-blue-400 to-violet-500',
     },
     {
       category: 'Secondary Focus',
       technologies: profile.secondarySkills,
-      color: 'from-green-500 to-green-600',
+      color: 'from-sky-500 to-blue-600',
     },
   ]
 
@@ -44,8 +44,8 @@ export function TechStack() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <span className="text-green-400 font-semibold text-[clamp(0.65rem,1.5vw,0.875rem)] tracking-widest uppercase">Skills</span>
-          <h2 className="text-[clamp(2rem,5vw,3.5rem)] font-bold mt-[clamp(0.75rem,1.5vw,1rem)]">What I Do</h2>
+          <span className="eyebrow">Skills</span>
+          <h2 className="heading-section mt-[clamp(0.75rem,1.5vw,1rem)]">What I Do</h2>
         </motion.div>
 
         {/* Tech Categories - 2 columns on mobile and tablet */}

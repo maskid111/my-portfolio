@@ -17,7 +17,7 @@ export function Navigation() {
 
   return (
     <motion.nav
-      className="fixed top-0 left-0 right-0 z-50 glass backdrop-blur-md border-b border-white/10"
+      className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-background/78 backdrop-blur-xl"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -37,14 +37,14 @@ export function Navigation() {
                 href={item.href}
                 className={`text-[0.55rem] sm:text-xs md:text-sm font-medium transition-colors relative rounded-md px-1 py-1 md:px-0 md:py-0 ${
                   pathname === item.href
-                    ? 'text-blue-400 bg-blue-500/10 md:bg-transparent'
+                    ? 'text-blue-300 bg-blue-500/10 md:bg-transparent'
                     : 'text-gray-400 hover:text-white hover:bg-white/5 md:hover:bg-transparent'
                 }`}
               >
                 {item.label}
                 {pathname === item.href && (
                   <motion.div
-                    className="absolute bottom-[-8px] left-0 right-0 hidden h-1 bg-gradient-to-r from-blue-500 to-purple-600 md:block"
+                    className="absolute bottom-[-8px] left-0 right-0 hidden h-1 bg-gradient-to-r from-blue-400 to-violet-400 md:block"
                     layoutId="underline"
                   />
                 )}

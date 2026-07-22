@@ -13,7 +13,7 @@ export function FollowCTA() {
       whileHover={{ y: -4 }}
     >
       <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10"
+        className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-violet-500/10 to-slate-500/5"
         animate={{ opacity: [0.45, 0.75, 0.45] }}
         transition={{ duration: 6, repeat: Infinity }}
       />
@@ -36,7 +36,7 @@ export function FollowCTA() {
             href={profile.socialLinks.x}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 px-5 py-3 font-semibold text-white hover:from-blue-600 hover:to-purple-700"
+            className="btn-primary px-5 py-3"
           >
             Follow on X
             <ArrowRight className="h-4 w-4" />
@@ -45,7 +45,7 @@ export function FollowCTA() {
             href={profile.socialLinks.telegram}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 px-5 py-3 font-semibold text-gray-200 hover:border-white/30 hover:bg-white/10"
+            className="btn-secondary px-5 py-3 text-gray-200"
           >
             <Send className="h-4 w-4" />
             Telegram
@@ -54,7 +54,7 @@ export function FollowCTA() {
             href={profile.socialLinks.discord}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 px-5 py-3 font-semibold text-gray-200 hover:border-white/30 hover:bg-white/10"
+            className="btn-secondary px-5 py-3 text-gray-200"
           >
             <MessageCircle className="h-4 w-4" />
             Discord

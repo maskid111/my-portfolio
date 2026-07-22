@@ -14,7 +14,7 @@ export function XPostCard({ post }: XPostCardProps) {
   return (
     <article className="glass-strong group flex min-h-[12rem] flex-col overflow-hidden rounded-[clamp(0.75rem,2vw,1rem)] border border-white/10 bg-black/20">
       <a href={post.url} target="_blank" rel="noopener noreferrer" className="block">
-        <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-blue-500/25 via-purple-500/20 to-pink-500/20">
+        <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-blue-500/20 via-violet-500/16 to-slate-500/12">
           {post.mediaUrl ? (
             <img
               src={post.mediaUrl}
@@ -47,7 +47,7 @@ export function XPostCard({ post }: XPostCardProps) {
 
         <div className="mt-3 grid grid-cols-3 gap-1 border-t border-white/10 pt-2 text-[0.6rem] text-gray-400 sm:text-xs">
           <span className="flex min-w-0 items-center gap-1">
-            <Heart className="h-3 w-3 shrink-0 text-pink-400" />
+            <Heart className="h-3 w-3 shrink-0 text-violet-300" />
             {formatMetric(post.metrics.likes)}
           </span>
           <span className="flex min-w-0 items-center gap-1">
@@ -55,7 +55,7 @@ export function XPostCard({ post }: XPostCardProps) {
             {formatMetric(post.metrics.replies)}
           </span>
           <span className="flex min-w-0 items-center gap-1">
-            <Eye className="h-3 w-3 shrink-0 text-purple-400" />
+            <Eye className="h-3 w-3 shrink-0 text-blue-300" />
             {formatMetric(post.metrics.views)}
           </span>
         </div>

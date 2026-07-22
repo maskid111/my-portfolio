@@ -46,7 +46,7 @@ export function SocialLinksGrid() {
       icon: <Send className="w-8 h-8 md:w-10 md:h-10" />,
       href: profile.socialLinks.telegram,
       color: 'text-blue-400',
-      bgGradient: 'from-blue-500 to-cyan-800',
+      bgGradient: 'from-blue-600 to-sky-900',
     },
     {
       id: 'discord',
@@ -56,7 +56,7 @@ export function SocialLinksGrid() {
       icon: <MessageCircle className="w-8 h-8 md:w-10 md:h-10" />,
       href: profile.socialLinks.discord,
       color: 'text-indigo-300',
-      bgGradient: 'from-indigo-600 to-purple-900',
+      bgGradient: 'from-indigo-600 to-violet-950',
     },
     {
       id: 'email',
@@ -65,8 +65,8 @@ export function SocialLinksGrid() {
       description: 'Drop me an email directly',
       icon: <Mail className="w-8 h-8 md:w-10 md:h-10" />,
       href: profile.socialLinks.email,
-      color: 'text-amber-300',
-      bgGradient: 'from-amber-600 to-orange-900',
+      color: 'text-blue-100',
+      bgGradient: 'from-slate-700 to-blue-950',
     },
   ]
 

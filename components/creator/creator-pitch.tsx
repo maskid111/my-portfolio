@@ -38,10 +38,10 @@ export function CreatorPitch() {
         viewport={{ once: true, margin: '-80px' }}
       >
         <motion.div variants={animations.directionalItemVariants} custom={0} className="max-w-3xl">
-          <span className="text-purple-400 font-semibold text-[clamp(0.65rem,1.5vw,0.875rem)] tracking-widest uppercase">
+          <span className="eyebrow">
             Creator Positioning
           </span>
-          <h2 className="mt-3 text-[clamp(2rem,5vw,3.5rem)] font-bold text-white">
+          <h2 className="heading-section mt-3 text-white">
             Content for teams that need clarity, trust, and attention.
           </h2>
           <p className="mt-4 text-[clamp(0.875rem,2vw,1.125rem)] leading-relaxed text-gray-400">
@@ -62,7 +62,7 @@ export function CreatorPitch() {
                 whileHover={{ y: -6, scale: 1.03, rotate: index % 2 === 0 ? -1 : 1 }}
               >
                 <motion.div
-                  className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-purple-400/20 bg-purple-500/10 text-purple-300"
+                  className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-violet-300/20 bg-violet-500/10 text-violet-200"
                   animate={{ y: [0, -4, 0] }}
                   transition={{ duration: 4, repeat: Infinity, delay: index * 0.25 }}
                 >

@@ -1,4 +1,5 @@
 import { Hero } from '@/components/hero'
+import { BrandOperatingSystem } from '@/components/brand-operating-system'
 import { FeaturedWork } from '@/components/featured-work'
 import { CurrentlyBuilding } from '@/components/currently-building'
 import { LatestContent } from '@/components/latest-content'
@@ -9,6 +10,9 @@ export default function Page() {
     <main className="min-h-screen bg-gradient-to-b from-background via-background to-background">
       {/* Hero Section */}
       <Hero />
+
+      {/* Brand System Section */}
+      <BrandOperatingSystem />
 
       {/* Featured Work Section */}
       <FeaturedWork />

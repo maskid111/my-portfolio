@@ -28,14 +28,11 @@ export function Hero() {
     return () => window.removeEventListener('mousemove', handleMouseMove)
   }, [])
 
-  const title = "Welcome to Maskid's Portfolio"
-  const titleWords = title.split(' ')
-
   return (
     <section className="relative md:min-h-screen md:grid md:grid-cols-[1fr_1fr] lg:grid-cols-[1.2fr_1fr] overflow-hidden flex md:flex-none flex-col justify-start md:justify-normal gap-0 sm:gap-8 md:gap-0">
       {/* Animated background elements */}
       <motion.div
-        className="absolute top-20 left-1/4 w-96 h-96 bg-blue-500/15 rounded-full blur-3xl"
+        className="absolute top-20 left-1/4 w-96 h-96 bg-blue-500/12 rounded-full blur-3xl"
         animate={{
           x: mousePosition.x * 20,
           y: mousePosition.y * 20,
@@ -43,7 +40,7 @@ export function Hero() {
         transition={{ type: 'spring', stiffness: 50, damping: 30 }}
       />
       <motion.div
-        className="absolute bottom-20 right-1/4 w-96 h-96 bg-purple-500/15 rounded-full blur-3xl"
+        className="absolute bottom-20 right-1/4 w-96 h-96 bg-violet-500/12 rounded-full blur-3xl"
         animate={{
           x: mousePosition.x * -15,
           y: mousePosition.y * -15,
@@ -63,7 +60,7 @@ export function Hero() {
         transition={{ duration: 4, repeat: Infinity }}
       />
       <motion.div
-        className="absolute bottom-1/3 right-0 w-px h-40 bg-gradient-to-b from-transparent via-purple-500/20 to-transparent pointer-events-none"
+        className="absolute bottom-1/3 right-0 w-px h-40 bg-gradient-to-b from-transparent via-violet-500/20 to-transparent pointer-events-none"
         animate={{ opacity: [0.3, 0.7, 0.3] }}
         transition={{ duration: 5, repeat: Infinity, delay: 1 }}
       />
@@ -79,34 +76,23 @@ export function Hero() {
         <motion.div className="flex min-h-full w-full max-w-xl flex-1 flex-col justify-evenly gap-3 sm:gap-5 md:block md:min-h-0 md:flex-none md:space-y-8" variants={animations.itemVariants}>
           {/* Animated headline */}
           <div className="space-y-0.5 sm:space-y-1 md:space-y-4">
-            <div className="flex flex-wrap gap-0.5 sm:gap-2 md:gap-3 items-baseline">
-              {titleWords.map((word, i) => (
-                <motion.span
-                  key={i}
-                  className="text-[clamp(1.98rem,9.02vw,2.915rem)] md:text-[clamp(1.15rem,3.8vw,3.5rem)] font-bold leading-tight"
-                  variants={animations.floatingVariants}
-                  custom={i}
-                  initial="hidden"
-                  animate="visible"
-                >
-                  {word === 'Future.' ? (
-                    <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                      {word}
-                    </span>
-                  ) : (
-                    word
-                  )}
-                </motion.span>
-              ))}
-            </div>
+            <motion.h1
+              className="heading-hero max-w-[20ch] text-balance sm:max-w-[24ch] md:max-w-none"
+              variants={animations.floatingVariants}
+              custom={0}
+              initial="hidden"
+              animate="visible"
+            >
+              Video Creator, Writer, Web Developer &amp; Blockchain <span className="gradient-text">Builder</span>
+            </motion.h1>
           </div>
 
           {/* Description */}
           <motion.p
-            className="text-[clamp(0.82rem,3.2vw,1rem)] md:text-[clamp(0.7rem,1.8vw,1.125rem)] text-gray-400 leading-relaxed max-w-lg"
+            className="body-copy max-w-lg md:text-[clamp(0.78rem,1.65vw,1.125rem)]"
             variants={animations.itemVariants}
           >
-            Creator, frontend developer, blockchain builder, and trader building in public across CT and Web3.
+            I'm Maskid. I turn Web3 and tech ideas into videos, threads, research, polished interfaces, and blockchain products people can understand, trust, and use.
           </motion.p>
 
           <motion.div
@@ -119,13 +105,13 @@ export function Hero() {
               return (
                 <motion.div
                   key={point.label}
-                  className="glass border border-white/10 rounded-lg px-2.5 py-2 sm:px-3 sm:py-2.5"
+                  className="surface-card px-2.5 py-2 sm:px-3 sm:py-2.5"
                   custom={index}
                   variants={animations.directionalItemVariants}
                   whileHover={{ y: -3, scale: 1.02 }}
                 >
                   <div className="flex items-start gap-2">
-                    <Icon className="mt-0.5 h-3.5 w-3.5 shrink-0 text-blue-400 sm:h-4 sm:w-4" />
+                    <Icon className="mt-0.5 h-3.5 w-3.5 shrink-0 text-blue-300 sm:h-4 sm:w-4" />
                     <div className="min-w-0">
                       <div className="text-[0.68rem] font-bold leading-tight text-white sm:text-xs md:text-sm">{point.value}</div>
                       <div className="mt-0.5 text-[0.58rem] leading-tight text-gray-400 sm:text-[0.68rem] md:text-xs">{point.label}</div>
@@ -149,7 +135,7 @@ export function Hero() {
             >
               <a
                 href="/creator"
-                className="flex w-full items-center justify-center glass hover-lift bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white border-0 h-8 sm:h-10 md:h-12 px-2.5 sm:px-5 md:px-8 font-semibold text-[clamp(0.65rem,1.6vw,1rem)] rounded-md sm:rounded-xl shadow-lg shadow-purple-600/30 hover:shadow-purple-600/50 transition-all duration-300 sm:w-auto"
+                className="btn-primary hover-lift flex w-full h-8 px-2.5 text-[clamp(0.65rem,1.6vw,1rem)] sm:h-10 sm:px-5 md:h-12 md:px-8 sm:w-auto"
               >
                 View My Work
                 <motion.span animate={{ x: [0, 4, 0] }} transition={{ duration: 2, repeat: Infinity }}>
@@ -167,7 +153,7 @@ export function Hero() {
                 href={profile.socialLinks.x}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex w-full items-center justify-center glass h-8 sm:h-10 md:h-12 px-2.5 sm:px-5 md:px-8 font-semibold border border-white/20 text-white hover:bg-white/10 hover:border-white/40 rounded-md sm:rounded-xl text-[clamp(0.65rem,1.6vw,1rem)] transition-all duration-300 sm:w-auto"
+                className="btn-secondary flex w-full h-8 px-2.5 text-[clamp(0.65rem,1.6vw,1rem)] sm:h-10 sm:px-5 md:h-12 md:px-8 sm:w-auto"
               >
                 Follow on X
               </a>
@@ -180,7 +166,7 @@ export function Hero() {
             variants={animations.itemVariants}
           >
             <motion.div
-              className="h-1 w-1 sm:h-2 sm:w-2 md:h-3 md:w-3 bg-green-500 rounded-full"
+              className="h-1 w-1 sm:h-2 sm:w-2 md:h-3 md:w-3 bg-blue-400 rounded-full"
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             />

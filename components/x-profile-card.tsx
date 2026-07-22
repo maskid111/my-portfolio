@@ -59,7 +59,7 @@ export function XProfileCard() {
       animate="visible"
     >
       {/* Cover */}
-      <div className="h-24 sm:h-32 bg-gradient-to-r from-blue-500/30 via-purple-500/30 to-pink-500/30 relative overflow-hidden">
+      <div className="h-24 sm:h-32 bg-gradient-to-r from-blue-500/25 via-violet-500/20 to-slate-900 relative overflow-hidden">
         {xProfile.bannerUrl && (
           <img
             src={xProfile.bannerUrl}
@@ -74,7 +74,7 @@ export function XProfileCard() {
           />
         )}
         <div className="absolute inset-0 bg-black/20" />
-        <div className="absolute inset-x-0 top-1 bottom-0 bg-gradient-to-br from-blue-400/20 to-transparent" />
+        <div className="absolute inset-x-0 top-1 bottom-0 bg-gradient-to-br from-blue-300/18 to-transparent" />
       </div>
 
       {/* Profile content */}
@@ -84,7 +84,7 @@ export function XProfileCard() {
           whileHover={{ scale: 1.05 }}
           transition={{ type: 'spring', stiffness: 300 }}
         >
-          <div className="w-16 sm:w-24 h-16 sm:h-24 rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 -mt-10 sm:-mt-16 ring-4 ring-background flex items-center justify-center text-white font-bold text-xl sm:text-2xl overflow-hidden">
+          <div className="w-16 sm:w-24 h-16 sm:h-24 rounded-full bg-gradient-to-br from-blue-500 via-violet-500 to-slate-800 -mt-10 sm:-mt-16 ring-4 ring-background flex items-center justify-center text-white font-bold text-xl sm:text-2xl overflow-hidden">
             {xProfile.profileImageUrl ? (
               <img
                 src={xProfile.profileImageUrl}
@@ -151,7 +151,7 @@ export function XProfileCard() {
               whileTap={{ scale: 0.95 }}
               title={social.label}
             >
-              <social.Icon className="w-5 h-5 text-blue-400" />
+              <social.Icon className="w-5 h-5 text-blue-300" />
             </motion.a>
           ))}
         </motion.div>
@@ -164,14 +164,14 @@ export function XProfileCard() {
           transition={{ delay: 0.35 }}
         >
           <a href="/contact" className="flex-1 py-1.5 text-center transition-colors hover:bg-white/5 sm:py-2">
-            <div className="flex items-center justify-center gap-1 text-pink-400 font-semibold text-sm">
+            <div className="flex items-center justify-center gap-1 text-violet-300 font-semibold text-sm">
               <Send className="w-4 h-4" />
               <span>Contact</span>
             </div>
           </a>
           <div className="w-px bg-white/10" />
           <a href="/about" className="flex-1 py-1.5 text-center transition-colors hover:bg-white/5 sm:py-2">
-            <div className="flex items-center justify-center gap-1 text-blue-400 font-semibold text-sm">
+            <div className="flex items-center justify-center gap-1 text-blue-300 font-semibold text-sm">
               <BookOpen className="w-4 h-4" />
               <span>About</span>
             </div>

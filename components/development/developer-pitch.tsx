@@ -39,10 +39,10 @@ export function DeveloperPitch() {
       >
         <motion.div variants={animations.itemVariants} className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-8 lg:gap-12 items-start">
           <motion.div variants={animations.directionalItemVariants} custom={0}>
-            <span className="text-green-400 font-semibold text-[clamp(0.65rem,1.5vw,0.875rem)] tracking-widest uppercase">
+            <span className="eyebrow">
               Builder Profile
             </span>
-            <h2 className="mt-3 text-[clamp(2rem,5vw,3.5rem)] font-bold text-white">
+            <h2 className="heading-section mt-3 text-white">
               I build usable products with a Web3-native edge.
             </h2>
             <p className="mt-4 text-[clamp(0.875rem,2vw,1.125rem)] leading-relaxed text-gray-400">
@@ -63,7 +63,7 @@ export function DeveloperPitch() {
                   whileHover={{ y: -6, scale: 1.03, rotate: index % 2 === 0 ? -1 : 1 }}
                 >
                   <motion.div
-                    className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg border border-green-400/20 bg-green-500/10 text-green-300"
+                    className="mb-4 flex h-10 w-10 items-center justify-center rounded-lg border border-blue-300/20 bg-blue-500/10 text-blue-200"
                     animate={{ rotate: [0, 2, 0], y: [0, -3, 0] }}
                     transition={{ duration: 5, repeat: Infinity, delay: index * 0.25 }}
                   >

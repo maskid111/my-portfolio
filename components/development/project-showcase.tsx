@@ -15,7 +15,7 @@ export function ProjectShowcase() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-[clamp(2rem,5vw,3.5rem)] font-bold">Development Work</h2>
+          <h2 className="heading-section">Development Work</h2>
           <p className="text-gray-400 mt-[clamp(1rem,2vw,1.5rem)] text-[clamp(0.875rem,2vw,1.125rem)] max-w-2xl mx-auto">
             Completed frontend, blockchain, ecommerce, and web product builds with source code and live demos.
           </p>
@@ -36,7 +36,7 @@ export function ProjectShowcase() {
               custom={index}
               whileHover={{ y: -6, scale: 1.02, rotate: index % 2 === 0 ? -1 : 1 }}
             >
-              <div className="relative flex h-24 items-end overflow-hidden bg-gradient-to-br from-blue-500/25 via-purple-500/20 to-pink-500/20 p-3 sm:h-32 sm:p-4">
+              <div className="relative flex h-24 items-end overflow-hidden bg-gradient-to-br from-blue-500/20 via-violet-500/14 to-slate-900 p-3 sm:h-32 sm:p-4">
                 <img
                   src={project.previewImageUrl}
                   alt={`${project.name} website preview`}
@@ -47,7 +47,7 @@ export function ProjectShowcase() {
                   }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/20" />
-                <div className="absolute right-2 top-2 inline-flex items-center gap-1 rounded-full border border-green-400/30 bg-green-500/10 px-2 py-1 text-[0.55rem] font-semibold text-green-300 sm:right-4 sm:top-4 sm:gap-2 sm:px-3 sm:text-xs">
+                <div className="absolute right-2 top-2 inline-flex items-center gap-1 rounded-full border border-blue-300/25 bg-blue-500/10 px-2 py-1 text-[0.55rem] font-semibold text-blue-200 sm:right-4 sm:top-4 sm:gap-2 sm:px-3 sm:text-xs">
                   <Rocket className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
                   {project.status}
                 </div>
@@ -81,7 +81,7 @@ export function ProjectShowcase() {
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-1 rounded-md border border-white/10 px-2 py-1.5 text-[0.65rem] font-semibold text-gray-200 transition-colors hover:border-white/30 hover:bg-white/10 sm:gap-2 sm:rounded-lg sm:px-3 sm:py-2 sm:text-sm"
+                    className="btn-secondary gap-1 px-2 py-1.5 text-[0.65rem] text-gray-200 sm:gap-2 sm:px-3 sm:py-2 sm:text-sm"
                   >
                     <Code2 className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                     Code
@@ -90,7 +90,7 @@ export function ProjectShowcase() {
                     href={project.demoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-1 rounded-md bg-gradient-to-r from-blue-500 to-purple-600 px-2 py-1.5 text-[0.65rem] font-semibold text-white transition-colors hover:from-blue-600 hover:to-purple-700 sm:gap-2 sm:rounded-lg sm:px-3 sm:py-2 sm:text-sm"
+                    className="btn-primary gap-1 px-2 py-1.5 text-[0.65rem] sm:gap-2 sm:px-3 sm:py-2 sm:text-sm"
                   >
                     <ExternalLink className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                     Demo

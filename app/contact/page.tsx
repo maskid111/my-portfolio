@@ -25,13 +25,13 @@ export default function ContactPage() {
           className="mt-[clamp(2rem,4vw,4rem)] mb-[clamp(2rem,4vw,4rem)]"
         >
           <motion.div variants={animations.itemVariants} className="text-center mb-[clamp(2rem,4vw,3rem)]">
-            <span className="text-green-400 font-semibold text-[clamp(0.65rem,1.5vw,0.875rem)] tracking-widest uppercase">
+            <span className="eyebrow">
               Get In Touch
             </span>
-            <h2 className="text-[clamp(2rem,5vw,3.5rem)] font-bold mt-[clamp(0.75rem,1.5vw,1rem)] text-white text-balance">
+            <h2 className="heading-section mt-[clamp(0.75rem,1.5vw,1rem)] text-white text-balance">
               Let's Connect
             </h2>
-            <p className="text-gray-400 text-[clamp(0.875rem,2vw,1.125rem)] mt-[clamp(1rem,2vw,1.5rem)] max-w-2xl mx-auto">
+            <p className="body-copy mt-[clamp(1rem,2vw,1.5rem)] max-w-2xl mx-auto">
               The best way to reach me is through social platforms. Let's start a conversation!
             </p>
           </motion.div>

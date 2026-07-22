@@ -10,7 +10,7 @@ export function SocialLinks() {
     { icon: Zap, label: 'X', href: profile.socialLinks.x, color: 'from-blue-500 to-blue-600' },
     { icon: Mail, label: 'Email', href: profile.socialLinks.email, color: 'from-red-500 to-red-600' },
     { icon: Send, label: 'Telegram', href: profile.socialLinks.telegram, color: 'from-blue-400 to-blue-500' },
-    { icon: MessageCircle, label: 'Discord', href: profile.socialLinks.discord, color: 'from-purple-500 to-purple-600' },
+    { icon: MessageCircle, label: 'Discord', href: profile.socialLinks.discord, color: 'from-indigo-500 to-violet-600' },
   ]
 
   return (

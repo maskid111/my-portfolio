@@ -19,13 +19,13 @@ export function FeaturedWork() {
           viewport={{ once: true, margin: '-100px' }}
         >
           <motion.div className="mb-[clamp(2rem,4vw,4rem)]" variants={animations.itemVariants}>
-            <span className="text-blue-400 font-semibold text-[clamp(0.65rem,1.5vw,0.875rem)] tracking-widest uppercase">
+            <span className="eyebrow">
               Featured Work
             </span>
-            <h2 className="text-[clamp(2rem,5vw,3.5rem)] font-bold mt-[clamp(0.75rem,2vw,1rem)] text-white text-balance">
+            <h2 className="heading-section mt-[clamp(0.75rem,2vw,1rem)] text-white text-balance">
               Featured Builds
             </h2>
-            <p className="text-gray-400 text-[clamp(0.875rem,2vw,1.125rem)] mt-[clamp(1rem,2vw,1.5rem)] max-w-2xl leading-relaxed">
+            <p className="body-copy mt-[clamp(1rem,2vw,1.5rem)] max-w-2xl">
               Selected products showing the range of Maskid&apos;s work across decentralized apps, ecommerce, and practical web experiences.
             </p>
           </motion.div>
@@ -34,20 +34,20 @@ export function FeaturedWork() {
             {featuredProjects.map((project, index) => (
               <motion.article
                 key={project.name}
-                className="group glass-strong rounded-xl sm:rounded-2xl lg:rounded-[1.5rem] overflow-hidden hover-lift relative flex flex-col border border-white/10 bg-black/20"
+                className="group glass-strong overflow-hidden hover-lift relative flex flex-col bg-black/20 rounded-xl sm:rounded-2xl lg:rounded-[1.5rem]"
                 custom={index}
                 variants={animations.directionalItemVariants}
                 whileHover={{ y: -8, scale: 1.02, rotate: index % 2 === 0 ? -1 : 1 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <div className="relative h-28 overflow-hidden bg-gradient-to-br from-blue-500/25 via-purple-500/20 to-pink-500/20 p-3 sm:h-36 sm:p-5">
+                <div className="relative h-28 overflow-hidden bg-gradient-to-br from-blue-500/20 via-violet-500/14 to-slate-900 p-3 sm:h-36 sm:p-5">
                   <img
                     src={project.previewImageUrl}
                     alt={`${project.name} website preview`}
                     className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
                     onError={(event) => {
-                      event.currentTarget.style.display = 'none'
+                      event.currentTarget.src = '/placeholder.jpg'
                     }}
                   />
                   <motion.div
@@ -57,7 +57,7 @@ export function FeaturedWork() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/20" />
                   <div className="relative z-10 flex h-full flex-col justify-between">
-                    <span className="inline-flex w-fit items-center gap-1.5 rounded-full border border-green-400/30 bg-green-500/10 px-2 py-1 text-[0.58rem] font-semibold text-green-300 sm:gap-2 sm:px-3 sm:text-xs">
+                    <span className="inline-flex w-fit items-center gap-1.5 rounded-full border border-blue-300/25 bg-blue-500/10 px-2 py-1 text-[0.58rem] font-semibold text-blue-200 sm:gap-2 sm:px-3 sm:text-xs">
                       <Sparkles className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
                       {project.status}
                     </span>
@@ -78,7 +78,7 @@ export function FeaturedWork() {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-1.5 rounded-lg border border-white/10 px-2 py-2 text-[0.65rem] font-semibold text-gray-200 transition-colors hover:border-white/30 hover:bg-white/10 sm:gap-2 sm:px-3 sm:text-sm"
+                      className="btn-secondary px-2 py-2 text-[0.65rem] text-gray-200 sm:px-3 sm:text-sm"
                     >
                       <Code2 className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                       Code
@@ -87,7 +87,7 @@ export function FeaturedWork() {
                       href={project.demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center gap-1.5 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 px-2 py-2 text-[0.65rem] font-semibold text-white transition-colors hover:from-blue-600 hover:to-purple-700 sm:gap-2 sm:px-3 sm:text-sm"
+                      className="btn-primary px-2 py-2 text-[0.65rem] sm:px-3 sm:text-sm"
                     >
                       Demo
                       <ExternalLink className="h-3.5 w-3.5 sm:h-4 sm:w-4" />

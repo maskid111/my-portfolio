@@ -18,7 +18,7 @@ export function AvailabilityCard() {
             animate={{ scale: [1, 1.1, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            <CheckCircle className="h-6 w-6 text-green-400" />
+            <CheckCircle className="h-6 w-6 text-blue-300" />
           </motion.div>
           <h3 className="text-lg font-bold">Currently Available</h3>
         </div>
@@ -29,7 +29,7 @@ export function AvailabilityCard() {
 
       <div className="border-t border-white/10 pt-6">
         <div className="flex items-center gap-3 mb-4">
-          <Clock className="h-6 w-6 text-blue-400" />
+          <Clock className="h-6 w-6 text-violet-300" />
           <h3 className="text-lg font-bold">Response Time</h3>
         </div>
         <p className="text-gray-400 text-sm">
@@ -40,15 +40,15 @@ export function AvailabilityCard() {
       <div className="space-y-3 pt-2">
         <div className="flex justify-between text-sm">
           <span className="text-gray-400">Gigs</span>
-          <span className="text-green-400 font-medium">Available</span>
+          <span className="text-blue-300 font-medium">Available</span>
         </div>
         <div className="flex justify-between text-sm">
           <span className="text-gray-400">Collaborations</span>
-          <span className="text-green-400 font-medium">Available</span>
+          <span className="text-blue-300 font-medium">Available</span>
         </div>
         <div className="flex justify-between text-sm">
           <span className="text-gray-400">Mentorship & Training</span>
-          <span className="text-green-400 font-medium">Available</span>
+          <span className="text-blue-300 font-medium">Available</span>
         </div>
       </div>
     </motion.div>

@@ -28,9 +28,9 @@ export const profile = {
     genLayer: 'https://x.com/GenLayer',
   },
   seo: {
-    title: 'Maskid | Creator & Blockchain Developer',
+    title: 'Maskid | Creator, Web Developer & Blockchain Builder',
     description:
-      'Maskid is a video content creator, content writer, frontend developer, and blockchain builder creating content, tools, and ideas for CT, Web3, and the future of work.',
+      "Explore Maskid's personal brand: creator, web developer, blockchain builder, and trader turning Web3 ideas into clear content, polished interfaces, and useful products.",
   },
 }
 

@@ -44,8 +44,8 @@ export function FunFacts() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <span className="text-pink-400 font-semibold text-[clamp(0.65rem,1.5vw,0.875rem)] tracking-widest uppercase">Fun Facts</span>
-          <h2 className="text-[clamp(2rem,5vw,3.5rem)] font-bold mt-[clamp(0.75rem,1.5vw,1rem)]">Beyond the Code</h2>
+          <span className="eyebrow">Fun Facts</span>
+          <h2 className="heading-section mt-[clamp(0.75rem,1.5vw,1rem)]">Beyond the Code</h2>
         </motion.div>
 
         {/* Facts Grid - 2 columns on mobile and tablet */}
@@ -63,11 +63,11 @@ export function FunFacts() {
               variants={animations.itemVariants}
             >
               {/* Gradient background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-pink-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-violet-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
               <div className="relative z-10 space-y-[clamp(0.75rem,1.5vw,1rem)]">
                 <motion.div
-                  className="inline-flex p-[clamp(0.5rem,1vw,0.75rem)] rounded-[clamp(0.5rem,1.5vw,0.75rem)] bg-gradient-to-br from-pink-500 to-purple-600 bg-opacity-20 text-pink-400"
+                  className="inline-flex p-[clamp(0.5rem,1vw,0.75rem)] rounded-[clamp(0.5rem,1.5vw,0.75rem)] bg-gradient-to-br from-blue-500/20 to-violet-600/20 text-violet-200"
                   whileHover={{ scale: 1.1, rotate: 10 }}
                 >
                   <div className="w-[clamp(1rem,1.8vw,1.25rem)] h-[clamp(1rem,1.8vw,1.25rem)]">

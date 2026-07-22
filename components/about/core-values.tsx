@@ -23,27 +23,27 @@ export function CoreValues() {
       icon: <Users className="h-8 w-8" />,
       title: 'CT Presence',
       description: 'Creating, writing, and building in public for the crypto and Web3 timeline.',
-      color: 'purple',
+      color: 'violet',
     },
     {
       icon: <Target className="h-8 w-8" />,
       title: 'Execution',
       description: 'Focused on turning ideas into content, products, analysis, and useful frontend experiences.',
-      color: 'pink',
+      color: 'indigo',
     },
     {
       icon: <Zap className="h-8 w-8" />,
       title: 'Growth',
       description: 'Building toward becoming one of the biggest creators and builders on CT.',
-      color: 'yellow',
+      color: 'sky',
     },
   ]
 
   const colorClasses = {
     blue: 'from-blue-500 to-blue-600',
-    purple: 'from-purple-500 to-purple-600',
-    pink: 'from-pink-500 to-pink-600',
-    yellow: 'from-yellow-500 to-yellow-600',
+    violet: 'from-violet-500 to-violet-600',
+    indigo: 'from-indigo-500 to-indigo-600',
+    sky: 'from-sky-500 to-blue-600',
   }
 
   return (
@@ -56,8 +56,8 @@ export function CoreValues() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <span className="text-purple-400 font-semibold text-[clamp(0.65rem,1.5vw,0.875rem)] tracking-widest uppercase">Values</span>
-          <h2 className="text-[clamp(2rem,5vw,3.5rem)] font-bold mt-[clamp(0.75rem,1.5vw,1rem)]">What Drives Me</h2>
+          <span className="eyebrow">Values</span>
+          <h2 className="heading-section mt-[clamp(0.75rem,1.5vw,1rem)]">What Drives Me</h2>
         </motion.div>
 
         {/* Values Grid - 2 columns on mobile and tablet */}
@@ -81,7 +81,7 @@ export function CoreValues() {
 
                 <div className="relative z-10 space-y-[clamp(0.75rem,1.5vw,1rem)]">
                   <motion.div
-                    className={`inline-flex p-[clamp(0.5rem,1vw,0.75rem)] rounded-[clamp(0.5rem,1.5vw,0.75rem)] bg-gradient-to-br ${colorClass} bg-opacity-20 text-${value.color}-400`}
+                    className="inline-flex p-[clamp(0.5rem,1vw,0.75rem)] rounded-[clamp(0.5rem,1.5vw,0.75rem)] bg-white/5 text-blue-200"
                     whileHover={{ scale: 1.1 }}
                   >
                     <div className="w-[clamp(1.25rem,2vw,1.75rem)] h-[clamp(1.25rem,2vw,1.75rem)]">

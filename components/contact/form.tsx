@@ -48,7 +48,7 @@ export function ContactForm() {
                 onChange={handleChange}
                 required
                 placeholder="Your name"
-                className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors"
+                className="field-input"
               />
             </motion.div>
 
@@ -62,7 +62,7 @@ export function ContactForm() {
                 onChange={handleChange}
                 required
                 placeholder="you@example.com"
-                className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors"
+                className="field-input"
               />
             </motion.div>
           </div>
@@ -77,7 +77,7 @@ export function ContactForm() {
               onChange={handleChange}
               required
               placeholder="Gigs, collaboration, mentorship, or training"
-              className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors"
+              className="field-input"
             />
           </motion.div>
 
@@ -91,7 +91,7 @@ export function ContactForm() {
               required
               placeholder="Tell Maskid what you want to build, book, or discuss..."
               rows={6}
-              className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-colors resize-none"
+              className="field-input resize-none"
             />
           </motion.div>
 
@@ -99,7 +99,7 @@ export function ContactForm() {
           <motion.div variants={animations.itemVariants}>
             <Button
               type="submit"
-              className="w-full glass bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white border-0 h-12 font-semibold text-base"
+              className="btn-primary w-full h-12 text-base"
             >
               Open Email Draft
               <Send className="ml-2 h-5 w-5" />
